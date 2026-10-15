@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="utskrift">Totalprisen er: </p>
+    
+    <script>
+        let handlekurv = [
+            {vare: "Pizza", pris: 130},
+            {vare: "Brus", pris: 30},
+            {vare: "Goteriburger", pris: 50}
+            ]
+            console.log(handlekurv[0].pris)
+        // vare og pris er nøkkler, pizza og 130 er verdier
+
+        /*
+        console.log(hanldekurv[0].vare + " = " + handlekurv.[0].pris + "kr")
+        */
+
+        let sum = 0
+        for (const kjøp of handlekurv) {
+            sum = sum + Number(kjøp.pris)
+        }
+        console.log("Jacobs sum: " + sum)
+
+        document.getElementById("utskrift").innerHTML += sum
+        
+        //Patriks alternativ
+        let totalPris
+        handlekurv.map(h => {totalPris += h.pris})
+        console.log("Patriks sum: " + sum)
+        
+        //Erlings alternativ
+        let total = 0
+        handlekurv.forEach((produkt) => {
+            total += produkt.pris
+        })
+        console.log("Erlings sum: " + total)
+
+        function beregnTotalSum() {
+            let total = 0
+
+            for(let i = 0; i < handlekurv.length; i++) {
+                total += handlekurv[i].pris
+            }
+            return total
+        }
+        console.log("Funksjon: " + beregnTotalSum())
+        
+        /*
+        for (let h in handlekurv) {
+            console.log(hanldekurv[h].vare + " = " + handlekurv.[h].pris + "kr")
+        }
+        */
+        
+
+
+
+        let tall = [1, 3, 5, 7]
+        //På samme måte, så kan man hente ved index nummer
+        console.log(tall[3])
+
+
+    </script>
+</body>
+</html>
