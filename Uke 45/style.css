@@ -1,0 +1,72 @@
+/* Grunnleggende stil */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+#top-header {
+    background-color: #b82200;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top-header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.main-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero img {
+    width: 200px;
+    height: auto;
+}
+
+.service-card {
+    background-color: #f8f9fa;
+    border-left: 5px solid #b82200;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.bottom {
+    background-color: #313131;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* =========================================================
+   OPPGAVE FOR STUDENTENE: 
+   Legg til Media Queries under her slik at siden tilpasser 
+   seg mobilskjermer (f.eks. maks-bredde 600px/768px).
+   - Menyen bør stable seg vertikalt på mobil.
+   - Bildet må passe inn på mindre skjermer.
+   - Marger/padding bør justeres.
+   =========================================================*/
+
+@media (min-width: 600px) {
+	#grid-container {
+		grid-template-areas: "header header header" "nav nav nav" "main main aside" "footer footer footer";
+	}
+}
